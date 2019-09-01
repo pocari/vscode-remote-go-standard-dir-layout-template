@@ -23,5 +23,6 @@ schema:
     - .git
     - .realize
     - vendor
-    - containers
+    - build
+    - bin
     - .devcontainers
