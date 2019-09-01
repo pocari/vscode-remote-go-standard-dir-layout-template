@@ -1,4 +1,4 @@
-FROM golang:1.12.9
+FROM golang:1.13rc2
 
 # Verify git, process tools installed
 RUN apt-get update && apt-get -y install \
@@ -25,7 +25,7 @@ RUN go get -u -v \
     github.com/mgechev/revive \
     github.com/oxequa/realize \
     golang.org/x/tools/gopls \
-    github.com/derekparker/delve/cmd/dlv 2>&1
+    github.com/go-delve/delve/cmd/dlv 2>&1
 
 # gocode-gomod
 RUN go get -d github.com/stamblerre/gocode \
