@@ -1,0 +1,27 @@
+settings:
+  legacy:
+    force: false
+    interval: 0s
+server:
+  host: 0.0.0.0
+schema:
+- name: app1
+  path: .
+  commands:
+    install:
+      status: true
+      method: make build
+    run:
+      status: true
+      method: bin/app1
+  watcher:
+    extensions:
+    - go
+    paths:
+    - /
+    ignored_paths:
+    - .git
+    - .realize
+    - vendor
+    - containers
+    - .devcontainers
